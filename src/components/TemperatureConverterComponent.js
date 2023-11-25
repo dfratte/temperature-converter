@@ -19,7 +19,7 @@ const TemperatureConverterComponent = () => {
             <h1>Temperature Converter</h1>
             <div className="form-container">
                 <div className="conversion-container">
-                    <p>Select a conversion type, enter a temperature, and click Convert.</p>
+                    <p>Select a conversion type, enter a temperature, and click Convert</p>
                     <select className="conversion-select" data-testid="conversion-select" value={conversionType} onChange={e => setConversionType(e.target.value)}>
                         <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
                         <option value="fahrenheitToCelsius">Fahrenheit to Celsius</option>
