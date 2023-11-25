@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TemperatureConverter from "../services/TemperatureConverter";
 import './TemperatureConverterComponent.css';
+import thermometerImage from '../img/temperature-converter.png'; // replace with the actual path to your image
 
 const TemperatureConverterComponent = () => {
     const [input, setInput] = useState("");
@@ -16,7 +17,10 @@ const TemperatureConverterComponent = () => {
 
     return (
         <div className="temperature-converter">
-            <h1>Temperature Converter</h1>
+            <h1>
+                <img src={thermometerImage} alt="Thermometer" style={{height: '50px', marginRight: '10px'}} />
+                Temperature Converter
+            </h1>
             <div className="form-container">
                 <div className="conversion-container">
                     <p>Select a conversion type, enter a temperature, and click Convert</p>
