@@ -1,0 +1,117 @@
+/* Main container styles */
+.temperature-converter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 30px 50px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+/* Header styles */
+.temperature-converter h1 {
+    color: #333;
+    margin: 20px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Text styles */
+.temperature-converter p,
+.instruction-text {
+    color: #777;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Label styles */
+.temperature-converter label {
+    color: #777;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* Input and select styles */
+.temperature-converter select,
+.temperature-converter input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.temperature-converter button {
+    margin-top: auto;
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    align-self: center;
+    margin-top: auto;
+}
+
+.temperature-converter button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Container styles */
+.conversion-container,
+.input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.conversion-select {
+    margin-right: 10px;
+}
+
+.input-container label {
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.conversion-select, .input-container input {
+    width: 30%;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
