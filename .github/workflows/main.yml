@@ -1,11 +1,9 @@
 name: CI/CD Workflow
 
-on:
-  push:
-    branches: [ main ]
+on: push
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,23 +20,36 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Test
-      run: npm test
-
     - name: Archive Production Artifact
       uses: actions/upload-artifact@v2
       with:
         name: dist
         path: dist/
 
-  deploy:
-    needs: build-and-test
+  test:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Test
+      run: npm test
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
     - name: Download Artifact
       uses: actions/download-artifact@v2
       with:
