@@ -18,11 +18,11 @@ class TemperatureConverter {
     }
 
     celsiusToKelvin(celsius) {
-        return celsius + 273.15;
+        return Number(celsius) + 273.15;
     }
 
     kelvinToCelsius(kelvin) {
-        return kelvin - 273.15;
+        return Number(kelvin) - 273.15;
     }
 
     fahrenheitToKelvin(fahrenheit) {
