@@ -1,3 +1,8 @@
+/**
+ * TemperatureConverter class is responsible for converting temperatures
+ * between Celsius, Fahrenheit, and Kelvin. Its main goal is to be used as if it was a
+ * service, so it can be easily replaced by another implementation.
+ */
 class TemperatureConverter {
     constructor() {
         this.conversionMethods = {

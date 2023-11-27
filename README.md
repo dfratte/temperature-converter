@@ -4,7 +4,9 @@ This application is a simple temperature converter built with React. It allows u
 
 ## How It Works
 
-The application consists of a single React component that manages the entire conversion process.
+The application consists of a single React component that manages the entire conversion process. We simulate the call to an independent service to do the actual conversion. That logic is contained in the TemperatureConverter.js file.
+
+![Basic architecture diagram](./resources/architecture.png)
 
 1. **User Input:** The user selects the input temperature scale (Celsius, Fahrenheit, or Kelvin) and enters the temperature value they want to convert.
 
