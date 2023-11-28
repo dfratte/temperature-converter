@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TemperatureConverter from "../services/TemperatureConverter";
 import './TemperatureConverterComponent.css';
-import thermometerImage from '../img/temperature-converter.png'; // replace with the actual path to your image
+import thermometerImage from '../img/temperature-converter.png';
+import axios from 'axios';
 
 const TemperatureConverterComponent = () => {
     const [input, setInput] = useState("");
@@ -14,6 +15,16 @@ const TemperatureConverterComponent = () => {
         const outputMessage = `The result is ${result} ${unit}`;
         setOutput(outputMessage);
     }
+
+    const [lastCommitDate, setLastCommitDate] = useState(null);
+
+    useEffect(() => {
+        axios.get('https://api.github.com/repos/dfratte/temperature-converter/commits/main')
+            .then(response => {
+                setLastCommitDate(new Date(response.data.commit.author.date).toLocaleString());
+            })
+            .catch(error => console.error(error));
+    }, []);
 
     return (
         <div className="temperature-converter">
@@ -40,6 +51,9 @@ const TemperatureConverterComponent = () => {
                     <button data-testid="convert-button" onClick={convert}>Convert</button>
                 </div>
                 <p data-testid="output">{output}</p>
+            </div>
+            <div id="last-commit">
+                <p>Last deployed: {lastCommitDate}</p>
             </div>
         </div>
     );

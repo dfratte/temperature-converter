@@ -115,3 +115,14 @@
     justify-content: center;
     margin-top: auto;
 }
+
+#last-commit {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    padding: 0 10px;
+    margin: 0;
+    font-weight: bold;
+    color: green;
+    font-size: 10px;
+}
