@@ -27,12 +27,16 @@ class TemperatureConverter {
     }
 
     kelvinToCelsius(kelvin) {
-        return Number(kelvin) - 273.15;
+        return this.roundDigits(Number(kelvin) - 273.15);
     }
 
     fahrenheitToKelvin(fahrenheit) {
         const celsius = this.fahrenheitToCelsius(fahrenheit);
         return this.celsiusToKelvin(celsius);
+    }
+
+    roundDigits(number) {
+        return Math.round(number * 100) / 100;
     }
 
     convert(input, conversionType) {

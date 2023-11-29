@@ -26,6 +26,7 @@ describe('TemperatureConverter', () => {
     expect(converter.kelvinToCelsius(273.15)).toBeCloseTo(0);
     expect(converter.kelvinToCelsius(373.15)).toBeCloseTo(100);
     expect(converter.kelvinToCelsius(0)).toBeCloseTo(-273.15);
+    expect(converter.kelvinToCelsius(345)).toBe(71.85);
   });
 
   test('converts fahrenheit to kelvin', () => {
