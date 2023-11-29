@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/temperature-converter/static/css/main.9403a83c.css",
-    "main.js": "/temperature-converter/static/js/main.cd49afcf.js",
+    "main.js": "/temperature-converter/static/js/main.2332420a.js",
     "static/media/temperature-converter.png": "/temperature-converter/static/media/temperature-converter.588fff7895b281e0e600.png",
     "index.html": "/temperature-converter/index.html",
     "main.9403a83c.css.map": "/temperature-converter/static/css/main.9403a83c.css.map",
-    "main.cd49afcf.js.map": "/temperature-converter/static/js/main.cd49afcf.js.map"
+    "main.2332420a.js.map": "/temperature-converter/static/js/main.2332420a.js.map"
   },
   "entrypoints": [
     "static/css/main.9403a83c.css",
-    "static/js/main.cd49afcf.js"
+    "static/js/main.2332420a.js"
   ]
 }
