@@ -1,6 +1,6 @@
 # Temperature Converter [![build](https://github.com/dfratte/temperature-converter/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/dfratte/temperature-converter/actions/workflows/main.yml)
 
-This application is a simple temperature converter built with React. It allows users to convert temperatures between Celsius, Fahrenheit, and Kelvin.
+This application is a simple temperature converter built with React. It allows users to convert temperatures between Celsius, Fahrenheit, and Kelvin. It is a sample app to be used in the context of a CI/CD workshop organized by @dfratte.
 
 ## How It Works
 
